@@ -11,7 +11,7 @@ public:
     MemorySafe(T value): value1(value) {}
 
     // value getter
-    const T& get() const {
+    const T& unwrap() const {
         if (flag) {
             return value1;
         } else {
@@ -31,7 +31,13 @@ public:
 
     // implement for std::cout
     friend std::ostream& operator<<(std::ostream& os, const MemorySafe& ms) {
-        os << ms.get();
+        os << ms.unwrap();
         return os;
+    }
+
+    // implement =
+    MemorySafe& operator=(const T& value) {
+        update(value);
+        return *this;
     }
 };

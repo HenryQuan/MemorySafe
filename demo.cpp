@@ -15,7 +15,7 @@ int main() {
     std::cin.get();
 
     // change the value of unsafe_value
-    safe_value.update(safe_value.get() + 10);
+    safe_value.update(safe_value.unwrap() + 10);
     unsafe_value += 10;
     std::cout << "safe_value: " << safe_value << std::endl;
     std::cout << "unsafe_value: " << unsafe_value << std::endl;
@@ -23,7 +23,7 @@ int main() {
     std::cin.get();
 
     // change the value of unsafe_value
-    safe_value.update(safe_value.get() + 100);
+    safe_value = safe_value.unwrap() + 100;
     unsafe_value += 100;
     std::cout << "safe_value: " << safe_value << std::endl;
     std::cout << "unsafe_value: " << unsafe_value << std::endl;
