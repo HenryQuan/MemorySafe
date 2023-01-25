@@ -23,3 +23,5 @@ The demo showcases how `MemorySafe` could protect critical values. Both `safe_va
 ## Afterword
 
 This solution is not perfect. `safe_value` can still be found with more advanced techniques. However, it could at least block out many naive attackers like myself. iOS is getting more secure, but storing critical unprotected values in memory is not a good idea. I will cover more in my future blog posts.
+
+Also check my post on [Linkedin](https://www.linkedin.com/posts/yihengquan_memorysafe-is-my-naive-approach-providing-activity-7023976841812037632-BS9O?utm_source=share).
